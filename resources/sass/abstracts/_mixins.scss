@@ -1,0 +1,31 @@
+@mixin flexBetweenCenter() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flexGap($gap) {
+    display: flex;
+    align-items: center;
+    gap: $gap;
+}
+@mixin flexColumn($gap) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+@mixin flexJustifyAlignCenter($gap) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $gap;
+}
+@mixin cropField($background) {
+    border: none;
+    outline: none;
+    background: $background;
+}
+@mixin bottomLine($size, $color) {
+    border: none;
+    outline: none;
+    border-bottom: $size solid $color;
+}

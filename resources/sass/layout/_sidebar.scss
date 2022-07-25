@@ -1,0 +1,115 @@
+/* Sidebar */
+#user-sidebar {
+    background-color: $mainColor;
+    border-left: 1px solid rgba(255,255,255,0.2);
+
+    & > * {
+        border-bottom: 1px solid rgba(255,255,255,0.23);
+    }
+}
+.header-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 13px;
+    border: none !important;
+}
+/* Sidebar - login, register call to action */
+#sidebar-upper {
+    padding: $topNavAndAsidePadding 25px;
+}
+#login-register-action {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.lr-action {
+    a:hover {
+        text-decoration: underline;
+    }
+}
+#small-circle {
+    width: 5px;
+    height: 5px;
+    background: rgba(255,255,255,0.75);
+    border-radius: 50%;
+}
+/* Sidebar - sign in form */
+#aside-sign-in {
+    padding: 30px 10px;
+}
+.aside-inputs {
+    @include flexColumn(15px);
+}
+.aside-input {
+    @include cropField(none);
+    padding: 0 0 6px 0;
+    width: 100%;
+    font-size: 17px;
+    color: white;
+    border-bottom: 1px solid rgba(255,255,255,0.23);
+
+    &::placeholder {
+        color: rgba(255,255,255,0.5);
+    }
+}
+#aside-input-submit {
+    margin-top: 25px;
+    padding: 11px 20px;
+}
+#aside-regsiter-call {
+    margin-top: 25px;
+    font-size: 15px;
+    color: rgba(255,255,255,0.75);
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+/* Sidebar - other */
+#sidebar-image {
+    padding: 15px 0;
+    text-align: center;
+}
+#aside-image {
+    width: auto;
+    height: 130px;
+}
+#sidebar-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 30px;
+    font-size: 22px;
+    color: rgba(255,255,255,0.35);
+}
+/* Sidebar - user authenticated */
+#sidebar-title {
+    padding: 26px 25px 5px 25px;
+    border: none;
+}
+.sidebar-links {
+    padding: 20px 25px;
+}
+.sidebar-link a {
+    @include flexGap(18px);
+    padding: 9px 0;
+    color: rgba(255, 255, 255, 0.75);
+    cursor: pointer;
+    transition: $fastTransition;
+
+    &:hover {
+        padding-left: 5px;
+        background-color: rgba(255, 255, 255, 0.3);
+        color: white;
+    }
+}
+/* Sidebar (Responsive) */
+@media only screen and (max-width: 1050px) {
+    #aside-sign-in {
+        padding: 10px 0;
+    }
+    .aside-input {
+        width: 200px;
+    }
+}

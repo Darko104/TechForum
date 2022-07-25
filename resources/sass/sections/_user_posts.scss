@@ -1,0 +1,72 @@
+/* User posts */
+#user-posts {
+    padding: 20px 30px;
+}
+#user-title {
+    margin-bottom: 40px;
+    font-size: 22px;
+    color: #4c4a67;
+}
+.user-posts-table {
+    width: 100%;
+
+    tr {
+        display: grid;
+
+        &:not(:first-child):hover {
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+    }
+    th {
+        padding-bottom: 12px;
+        text-align: left;
+        text-transform: capitalize;
+        color: #7f7f7f;
+        font-weight: 600;
+        border-bottom: 2px solid $lightBorderLine;
+    }
+    td {
+        padding: 15px 0;
+    }
+}
+/* Posts - specific page */
+#user-posts-table-auth {
+    tr {
+        grid-template-columns: 10% 23% 37% 12% 18%;
+    }
+}
+/* Posts - profile index */
+#user-posts-table-no-auth {
+    tr {
+        grid-template-columns: 13% 23% 37% 27%;
+    }
+}
+/* Posts - general */
+.user-post-type {
+    padding-left: 10px !important;
+}
+.user-post-thread {
+    margin-bottom: 8px;
+}
+.user-post-category {
+    font-size: 13px;
+    color: $greyText1;
+}
+.user-post-message {
+    line-height: 19px;
+}
+.user-post-replies {
+    text-align: center;
+}
+.user-post-date {
+    font-size: 15px;
+}
+/* User posts (Responsive) */
+@media only screen and (max-width: 650px) {
+    #user-posts-table-auth {
+        text-align: center;
+    }
+    .user-posts-table th {
+        text-align: center;
+    }
+}

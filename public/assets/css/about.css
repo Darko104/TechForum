@@ -1,0 +1,232 @@
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* End of reset */
+a {
+    text-decoration: none;
+    color: initial;
+}
+header {
+    padding: 0 12.5%;
+    width: 100%;
+    box-sizing: border-box;
+}
+/* -- About -- */
+html, #body-about {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+#about-header {
+    padding: 20px 30px;
+    color: black;
+    background-color: white;
+}
+#about-logo {
+    font-family: sans-serif;
+    font-size: 29px;
+}
+#about-main {
+    padding: 0;
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+#about-author {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    text-align: center;
+    background-color: rgba(24, 24, 24, 0.438);
+    border-radius: 10px;
+}
+#author-empty-side {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #00adb5; */
+    background: rgb(40,47,47);
+    background: linear-gradient(315deg, #393e46 58%, #00adb5 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* About -> Author card */
+#author-card {
+    position: absolute;
+    right: -35px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    color: black;
+    background-color: #00d0db;
+    box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+    -webkit-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+    -moz-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+}
+#card-author-info {
+    padding: 2em 3.5em;
+    box-sizing: border-box;
+    height: 90%;
+}
+#author-picture {
+    margin-bottom: 12px;
+    width: auto;
+    height: 138px;
+    border-radius: 50%;
+}
+#card-author-name {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.card-border {
+    margin-bottom: 30px;
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+#author-ocupation {
+    font-weight: 200;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+#author-card-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 1em 3.5em;
+    box-sizing: border-box;
+    height: 10%;
+    background-color: white;
+}
+#author-card-social i {
+    font-size: 2em;
+    color: #00d0db;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#author-card-social i:hover {
+    color: #008d94;
+}
+/* Author -> right side */
+#author-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 5em;
+    box-sizing: border-box;
+    color: black;
+    background-color: white;
+}
+#initial-author-info {
+    display: block;
+}
+#author-info h1 {
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-size: 5em;
+    text-transform: uppercase;
+}
+#author-header-colored {
+    color: #00adb5;
+}
+#author-basic-info {
+    margin-bottom: 1.5rem;
+    font-size: 20px;
+    font-weight: 600;
+}
+#author-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.author-button {
+    padding: 0.8em 1.6em;
+    width: fit-content;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #00adb5;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.author-button:hover {
+    background-color: #00c0ca;
+}
+#author-more-info {
+    color: #a6a6a6;
+}
+/* About -> Project info */
+#this-project-info {
+    display: none;
+    flex-direction: column;
+    text-align: left;
+}
+.project-part {
+    margin-bottom: 40px;
+}
+.project-part-title {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #100e0e;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+.project-part-explanation {
+    line-height: 1.1em;
+    color: #474444;
+}

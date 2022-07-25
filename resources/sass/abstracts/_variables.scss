@@ -1,0 +1,23 @@
+/* Colors */
+$mainColor: #3F4DB8;
+$greyText1: #5c5c5c;
+$lightGrey: #666666;
+$lightText: #aaaaaa;
+$darkerText: #3a3a3a;
+$lightBorderLine: #d8d8d8;
+$errorColor: #cf454a;
+$errorBckgColor: #ffeeee;
+/* Sizing */
+$topNavAndAsidePadding: 20px;
+$navSearchLeftSidePad: 10px;
+$forumPreviewSidePadding: 30px;
+$multiPartContainerChildHeights: 50px;
+$forumPreviewTopPadding: calc(#{$multiPartContainerChildHeights} + 30px);
+$categoriesContainerGrid: 4fr 1fr 1fr 2fr;
+$loginPadding: 60px;
+$userProfileAvatarWidth: 120px;
+$addImageThreadWidthHeight: 80px;
+$cancelImageHeight: 20px;
+/* Transitions */
+$slowTransition: 0.5s;
+$fastTransition: 0.2s;

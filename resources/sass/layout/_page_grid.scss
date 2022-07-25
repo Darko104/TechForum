@@ -1,0 +1,11 @@
+/* Full page grid */
+#full-page-grid {
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+/* Full page grid (Responsive) */
+@media only screen and (max-width: 1050px) {
+    #full-page-grid {
+        grid-template-columns: 1fr;
+    }
+}

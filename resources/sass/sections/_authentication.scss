@@ -1,0 +1,18 @@
+.authentication-form-inputs {
+    @include flexColumn(25px);
+
+    input {
+        @include bottomLine(1px, grey);
+        padding: 5px 2px;
+        width: 300px;
+        font-size: 16px;
+
+        &:focus {
+            border-bottom-color: $mainColor;
+        }
+    }
+}
+.finish-action-auth-button {
+    margin-top: 33px;
+    padding: 11px 29px;
+}

@@ -1,0 +1,103 @@
+#write-message-wrapper {
+    padding-right: $loginPadding;
+    border-right: 1px solid $lightBorderLine;
+}
+#new-thread-form {
+    @include flexColumn(15px);
+
+    input, textarea {
+        padding: 10px;
+        width: 100%;
+        font-size: 16px;
+        box-sizing: border-box;
+        border: 1px solid $lightText;
+        outline: none;
+
+        &:focus {
+            border: 1px solid $mainColor;
+        }
+    }
+}
+.response-preview {
+    padding: 9px 15px 15px 15px;
+    color: #5a5f64;
+    background-color: #e1e5e8;
+    border-radius: 7px;
+}
+.response-preview-header {
+    margin-bottom: 14px;
+
+    span {
+        font-weight: 600;
+    }
+}
+.response-preview-text {
+    font-size: 15px;
+    font-style: italic;
+}
+#thread-text {
+    resize: none;
+    height: 150px;
+}
+#thread-images-title {
+    margin-bottom: 20px;
+}
+#thread-images-preview-add {
+    display: flex;
+    gap: 8px;
+}
+#image-previews {
+    @include flexGap(5px);
+}
+.cancel-image {
+    @include flexJustifyAlignCenter(initial);
+    height: $cancelImageHeight;
+    color: #fffdfd;
+    background-color: #ed5e68ba;
+    overflow: hidden;
+    cursor: pointer;
+}
+.image-preview {
+    width: $addImageThreadWidthHeight;
+    height: $addImageThreadWidthHeight;
+    background-size: cover;
+    background-position: center;
+}
+#add-new-image {
+    @include flexJustifyAlignCenter(initial);
+    width: $addImageThreadWidthHeight;
+    height: $addImageThreadWidthHeight;
+    font-size: 29px;
+    color: $darkerText;
+    border: 2px solid #afa6a6;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: $fastTransition;
+
+    &:hover {
+        background-color: #e6e6e6;
+    }
+}
+.thread-add-image {
+    display: none;
+}
+#submit-thread {
+    margin-top: 20px;
+    cursor: pointer;
+}
+#message-rules-wrapper {
+    padding-left: $loginPadding;
+    border-left: 1px solid #d8d8d8;
+}
+#message-rules {
+    @include flexColumn(30px);
+}
+.message-rule-title {
+    margin-bottom: 10px;
+    font-size: 21px;
+    color: #4f4f4f;
+}
+.message-rule-desc {
+    color: $greyText1;
+    line-height: 20px;
+}

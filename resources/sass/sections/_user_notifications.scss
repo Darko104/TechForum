@@ -1,0 +1,42 @@
+/* User notifications */
+#user-notifications {
+    padding: 20px 30px;
+}
+#notifications-wrapper {
+    @include flexColumn(10px);
+}
+.single-notification {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid $lightBorderLine;
+}
+.not-avat {
+    width: 45px;
+}
+.not-header {
+    @include flexGap(5px);
+    margin-bottom: 10px;
+}
+.not-header-user {
+    font-weight: 600;
+}
+.not-content-desc {
+    margin-bottom: 20px;
+    color: $greyText1;
+}
+.not-date {
+    color: $lightText;
+}
+/* User notifications (Responsive) */
+@media only screen and (max-width: 500px) {
+    .not-header {
+        align-items: unset;
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .single-notification {
+        flex-direction: column;
+    }
+}

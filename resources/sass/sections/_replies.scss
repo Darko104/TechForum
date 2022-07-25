@@ -1,0 +1,126 @@
+/* Replies */
+#thread-responses {
+    @include flexColumn(15px);
+    margin: 25px 0;
+}
+.single-reply {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: white;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 2px 9px;
+}
+.reply-user {
+    padding: 17px 10px;
+    text-align: center;
+    border-right: 1px solid #d4d4d4;
+}
+.reply-avatar {
+    width: 100px;
+    height: 100px;
+}
+.reply-username {
+    margin-top: 10px;
+}
+.reply-role {
+    margin: 5px 0 13px 0;
+    color: $lightGrey;
+    text-transform: capitalize;
+}
+.reply-posts, .reply-location {
+    font-size: 15px;
+
+    span {
+        color: $lightGrey;
+    }
+}
+.reply-content {
+    display: grid;
+    grid-template-rows: 2fr 6fr 2fr;
+    padding: 0 15px 0 15px;
+}
+.rc-header {
+    display: flex;
+    align-items: center;
+    color: $lightText;
+}
+.reply-admin-options {
+    margin-left: 10px;
+}
+.quote-reply {
+    padding: 8px;
+    margin-left: auto;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: $fastTransition;
+
+    &:hover {
+        background-color: #e6e6e6;
+    }
+}
+.rc-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 8px;
+    line-height: 19px;
+    color: #333333;
+
+    & > p {
+        min-height: 75px;
+    }
+}
+#rcm-preview {
+    margin-bottom: 18px;
+}
+.rcm-images {
+    @include flexGap(5px);
+    margin-top: 15px;
+}
+.rcm-image {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: $fastTransition;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+.open-image-notif {
+    font-size: 13px;
+    font-style: italic;
+}
+.rc-signature {
+    display: flex;
+    align-items: center;
+    color: $lightGrey;
+    border-top: 1px solid #d4d4d4;
+}
+/* Replies - full screen image */
+#full-page-cover-image {
+    max-width: 850px;
+    max-height: 600px;
+}
+/* Replies (Responsive) */
+@media only screen and (max-width: 580px) {
+    .single-reply {
+        grid-template-columns: 1fr;
+    }
+    .reply-user {
+        @include flexGap(10px);
+        text-align: unset;
+    }
+    .reply-content {
+        grid-template-rows: auto 6fr 2fr;
+    }
+    .quote-reply {
+        margin-left: 5px;
+    }
+    .rcm-images {
+        flex-direction: column;
+        align-items: unset;
+    }
+}

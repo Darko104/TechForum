@@ -1,0 +1,16 @@
+footer {
+    padding: 20px $forumPreviewSidePadding 20px $forumPreviewSidePadding;
+    color: white;
+    background-color: $mainColor;
+}
+#footer-upper {
+    @include flexGap(20px);
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.footer-link a {
+    @include flexGap(10px);
+}
+#footer-lower {
+    padding-top: 10px;
+}

@@ -1,0 +1,131 @@
+/* User profile - common */
+.user-main-box {
+    border: 2px solid #d8d8d8;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+#user-summary {
+    display: grid;
+    grid-template-rows: 130px auto;
+    height: fit-content;
+    overflow: hidden;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+#user-summary-background {
+    position: relative;
+    background-color: #3f4db8d6;
+    border-radius: 10px 10px 0 0;
+}
+#user-profile-avatar {
+    position: absolute;
+    width: $userProfileAvatarWidth;
+    height: auto;
+    left: calc(50% - (#{$userProfileAvatarWidth} / 2));
+    bottom: calc(0px - (#{$userProfileAvatarWidth} / 2 - 5px));
+    border-radius: 50%;
+}
+#us-form {
+    height: fit-content;
+}
+#user-summary-info {
+    padding: 80px 20px 45px 20px;
+    text-align: center;
+    border: 2px solid $lightBorderLine;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+}
+#us-change-avatar-label {
+    display: inline-block;
+    margin-bottom: 17px;
+    padding: 11px 10px;
+    text-transform: capitalize;
+    color: #DFDEDF;
+    background: #6E6D70;
+    border: none;
+    cursor: pointer;
+
+    i {
+        margin-left: 5px;
+    }
+}
+#us-change-avatar {
+    display: none;
+}
+#us-username {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+#us-email {
+    margin-bottom: 5px;
+    color: $darkerText;
+}
+#us-location {
+    color: $greyText1;
+}
+/* User profile - authenticated */
+#user-profile-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    gap: 35px;
+    padding: 25px;
+}
+#update-user {
+    padding: 20px;
+}
+#update-user-title {
+    margin-bottom: 40px;
+    font-size: 22px;
+    color: #4c4a67;
+}
+#update-user-inputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 25px;
+    row-gap: 15px;
+
+    input {
+        @include cropField(initial);
+        padding: 10px 5px;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+        border: 1px solid $lightBorderLine;
+
+        &:focus {
+            border-color: $mainColor;
+        }
+    }
+}
+#update-user-save {
+    margin-top: 30px;
+    padding: 11px 25px;
+}
+/* User profile - not authenticated */
+#user-profile-posts {
+    padding-bottom: 50px;
+    height: fit-content;
+}
+#profile-posts-inner-title {
+    text-align: center;
+    padding: 20px 0 40px 0;
+}
+/* User profile (Responsive) */
+@media only screen and (max-width: 850px) {
+    #user-profile-container {
+        grid-template-columns: 1fr;
+    }
+    #user-summary {
+        width: 300px;
+    }
+}
+@media only screen and (max-width: 620px) {
+    #update-user-inputs {
+        grid-template-columns: 1fr;
+    }
+}
+@media only screen and (max-width: 620px) {
+    #user-summary {
+        width: 100%;
+    }
+}

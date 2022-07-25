@@ -1,0 +1,221 @@
+body {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        color: inherit;
+    }
+}
+/* Scroll */
+/* Scroll - width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Scroll - Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Scroll - Handle */
+::-webkit-scrollbar-thumb {
+    background: darkgrey;
+    border-radius: 30px;
+}
+
+/* Scroll - Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/* Containers (for info and categories) */
+.basic-container {
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 5px;
+}
+.multi-part-container {
+    & > * {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0 25px;
+        box-sizing: border-box;
+        height: $multiPartContainerChildHeights;
+        border-bottom: 1px solid rgb(212, 212, 212);
+    }
+
+    :last-of-type {
+        border: none;
+    }
+}
+/* Two sides (for sign in, register and new messages) */
+.divided-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 40px;
+}
+.dc-title {
+    margin-bottom: 40px;
+    font-size: 35px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #666666;
+}
+/* Buttons */
+.light-button {
+    @include cropField(rgba(255,255,255,0.23));
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    cursor: pointer;
+
+    a {
+        display: block;
+        padding: 11px 20px;
+    }
+}
+.main-color-button {
+    @include cropField($mainColor);
+    padding: 11px;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 15px;
+
+    a {
+        display: block;
+        background-color: transparent;
+    }
+}
+/* User */
+.user-highlight {
+    color: #AA0000;
+    font-weight: 600;
+}
+/* Titles */
+#category-title {
+    margin: 0 0 30px 0;
+    font-size: 30px;
+    color: $lightGrey;
+}
+.lighter-title {
+    font-size: 22px;
+    color: #4c4a67;
+}
+/* Form */
+.label-with-input {
+    @include flexColumn(5px);
+
+    label {
+        display: inline-block;
+        margin-bottom: 8px;
+        color: $darkerText;
+    }
+}
+.label-input {
+    @include flexColumn(10px);
+
+    label {
+        font-size: 20px;
+    }
+}
+.form-error {
+    @include flexGap(8px);
+    margin-top: 4px;
+    padding: 10px;
+    color: $errorColor;
+    background-color: $errorBckgColor;
+    display: none;
+
+    i {
+        margin-right: 8px;
+        font-size: 20px;
+    }
+    span {
+        line-height: 19px;
+    }
+}
+.form-error-list {
+    color: $errorColor;
+    background-color: $errorBckgColor;
+
+    li {
+        @include flexGap(10px);
+    }
+    i {
+        font-size: 7px;
+        color: #e9696d;
+    }
+}
+.info-container {
+    padding: 17px 12px;
+    color: #270;
+    background-color: #DFF2BF;
+}
+/* Warning */
+.no-content-warning {
+    padding: 20px 0;
+    text-align: center;
+
+    a {
+        text-decoration: underline;
+    }
+}
+.no-content-topic {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 18px;
+    color: #5c5c5c;
+}
+/* Full page cover */
+.full-page-cover {
+    position:fixed;
+    top: 0;
+    right: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    @include flexJustifyAlignCenter(initial);
+    color: $darkerText;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+#close-full-page {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 17px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color: #03a9f4;
+    cursor: pointer;
+}
+/* Admin buttons */
+.admin-options {
+    @include flexGap(5px);
+}
+.admin-option-button {
+    border: none;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+
+    a {
+        display: block;
+        padding: 8px;
+    }
+}
+.admin-delete {
+    background-color: #f34642;
+}
+.admin-edit {
+    background-color: #45b8dd;
+}
