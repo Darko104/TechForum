@@ -136,7 +136,8 @@ const search = (() => {
 
                 html = "";
                 for (var thread of threads) {
-                    html += `<li><a href="thread/${thread.id}">${thread.title}</a></li>`;
+                    console.log(thread.threadId);
+                    html += `<li><a href="/thread/${thread.threadId}">${thread.title}</a></li>`;
                 }
 
                 $("#nav-search-results").html(html);
